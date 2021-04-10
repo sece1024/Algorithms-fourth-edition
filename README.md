@@ -1,5 +1,13 @@
 # Algorithms Fourth Edition
 
+## algs4.jar
+
+### 标准输入
+
+>  `StdIn`库从标准输入流中获取数据, 默认状态下系统会将标准输出定向到终端窗口——你输入的内容就是输入流(由<ctrl-d>或<ctrl-z>结束)
+
+
+
 # 第1章 基础
 
 ## 数组
@@ -25,5 +33,22 @@ for(int i=0;i<N;i++){
     b[i] = a[i];	// 初始化
 }
     
+```
+
+
+
+## 迭代器
+
+> 迭代器`Iterator`是一个实现了`hasNext()`和`next()`方法的类对象
+
+由以下接口定义：
+
+```java
+public interface Iterator<Item>
+{
+    boolean hasNext();
+    Item next();
+    void remove();
+}
 ```
 
