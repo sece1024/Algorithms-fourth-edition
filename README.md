@@ -52,3 +52,18 @@ public interface Iterator<Item>
 }
 ```
 
+## 链表
+
+> **链表**是一种递归的数据结构，它或者为空(null)，或者是指向一个结点(node)的引用，该结点含有一个泛型的元素和一个指向另一条链表的引用
+
+
+
+```java
+// 结点
+private class Node
+{
+    Item item;
+    Node next;
+}
+```
+
