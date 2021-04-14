@@ -44,6 +44,7 @@ for(int i=0;i<N;i++){
 由以下接口定义：
 
 ```java
+
 public interface Iterator<Item>
 {
     boolean hasNext();
@@ -51,6 +52,34 @@ public interface Iterator<Item>
     void remove();
 }
 ```
+
+
+
+```java
+//`iterator()`方法本身只是简单地从实现了Iterator接口的类对象中返回一个对象
+public Iterator<Item> iterator(){ return new ListIterator(); }// 保证了类必然会实现方法：hasNext(), next(), remove()供用例的foreach语句使用
+
+private class ListIterator implements Iterator<Item>{
+        Node current = first;
+
+        @Override
+        public boolean hasNext() {
+            return current != null;
+        }
+
+        @Override
+        public Item next() {
+            Item item = first.item;
+            first = first.next;
+            return item;
+        }
+
+        @Override
+        public void remove() {}
+    }
+```
+
+
 
 ## 链表
 
@@ -67,3 +96,17 @@ private class Node
 }
 ```
 
+
+
+# 一些问题
+
+## 程序运行
+
+### 在控制台运行
+
+1. 需要导入自己写的类时
+
+   * 如果被导入类和当前类不在同一个文件夹，需要cd到两个类的父路径中
+   * 并且提前将两个类编译出`.class`文件
+
+   
