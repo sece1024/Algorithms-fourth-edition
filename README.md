@@ -96,6 +96,21 @@ private class Node
 }
 ```
 
+## union-find
+
+**API**
+
+```java
+/*
+* API:
+* UF(int N) 初始化N个触点
+* void  union(int p, int q) 在p和q之间添加一条连线
+* int find(int p)   p所在分量的标识符
+* boolean connected(int p, int q)   如果p和q存在于同一个分量中则返回true
+* int count()   连通分量的数目
+* */
+```
+
 
 
 # 一些问题
@@ -110,3 +125,7 @@ private class Node
    * 并且提前将两个类编译出`.class`文件
 
    
+
+## 找不到或无法加载主类
+
+*包下的类，编译成源文件(.class)以后，需要在包的上一级目录下运行，类目前面需要带包名并且以'.'隔开；*
