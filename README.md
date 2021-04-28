@@ -1,16 +1,14 @@
 # Algorithms Fourth Edition
 
-## algs4.jar
-
-### 标准输入
+标准输入
 
 >  `StdIn`库从标准输入流中获取数据, 默认状态下系统会将标准输出定向到终端窗口——你输入的内容就是输入流(由<ctrl-d>或<ctrl-z>结束)
 
 
 
-# 第1章 基础
+## 第1章 基础
 
-## 数组
+### 数组
 
 > 起别名：将一个数组变量赋予另一个变量，那么两个变量将会指向同一个数组
 
@@ -37,7 +35,7 @@ for(int i=0;i<N;i++){
 
 
 
-## 迭代器
+### 迭代器
 
 > 迭代器`Iterator`是一个实现了`hasNext()`和`next()`方法的类对象
 
@@ -81,7 +79,7 @@ private class ListIterator implements Iterator<Item>{
 
 
 
-## 链表
+### 链表
 
 > **链表**是一种递归的数据结构，它或者为空(null)，或者是指向一个结点(node)的引用，该结点含有一个泛型的元素和一个指向另一条链表的引用
 
@@ -96,7 +94,7 @@ private class Node
 }
 ```
 
-## union-find
+### union-find
 
 **API**
 
@@ -111,7 +109,11 @@ private class Node
 * */
 ```
 
+## 第二章 排序
 
+### Comparable 接口
+
+> 在Java中，元素通常都是对象，对主键的描述则是通过一种内置的机制来完成。
 
 # 一些问题
 
